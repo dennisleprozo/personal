@@ -1,0 +1,19 @@
+.daybar {
+    display: flex;
+    align-items: flex-stretch;
+    align-content: left;
+    flex-wrap: nowrap;
+    font-size: 18px;
+    color: rgba(70, 97, 255, 0.904)
+}
+button {
+    padding: 0px 20px 0px 20px;
+    background-color: rgba(70, 134, 252, 0.829)
+
+}
+
+.intro {
+    padding: 20px;
+    left: 0px;
+    color: rgba(95, 228, 233, 0.644);
+}

@@ -1,0 +1,9 @@
+.intro {
+    padding: 10px;
+    color: rgba(95, 228, 233, 0.644);
+}
+
+Link {
+    align-items: flex-end;
+    left: 30px;
+}

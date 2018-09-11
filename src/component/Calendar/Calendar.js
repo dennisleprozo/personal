@@ -17,11 +17,12 @@ export default class Calendar extends Component {
   }
 
   render() {
-console.log(this.state.week)
+  console.log(this.state.week)
 
     return (
       <div>
         <Header handleClick={this.handleClick} />
+        
         <Body week={this.state.week} />
       </div>
     )

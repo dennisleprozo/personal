@@ -1,3 +1,4 @@
-SELECT c.class_name, c.description, t.time, t.day, c.pt_id 
+SELECT t.day, t.time, c.class_name, c.description, c.pt, t.time_id
 FROM classes c
-JOIN time t ON c.class_id=t.class_id;
+JOIN time t ON c.class_id=t.class_id
+order by t.time asc;

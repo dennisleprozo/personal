@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: #222;
+  background-color: #333;
 }
 
 .navbar navbar-dark {
@@ -22,7 +22,7 @@
 
 body {
   font-family: 'Arial', serif;
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.486);
 }
 
 .App-logo {
@@ -31,7 +31,7 @@ body {
 }
 
 .App-header {
-  background-color: #535353;
+  background-color: #333;
   height: 150px;
   padding: 20px;
   color: white;
@@ -64,9 +64,10 @@ body {
 
 
 /* Add media queries for smaller screens */
-/* @media screen and (max-width:720px) {
+ @media screen and (max-width:720px) { */
   .weekdays li, 
   .days li {width: 13.1%;}
+
 }
 
 @media screen and (max-width: 420px) {
@@ -74,9 +75,11 @@ body {
   .days li {width: 12.5%;}
   .days li 
   .active {padding: 2px;}
+
 }
 
 @media screen and (max-width: 290px) {
   .weekdays li, 
   .days li {width: 12.2%;}
-} */
+  
+}

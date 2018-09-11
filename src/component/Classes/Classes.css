@@ -1,0 +1,44 @@
+.mapped {
+    height: 100%;
+    color: rgba(64, 180, 136, 0.87);
+    font-size: 40px
+  }
+
+  #desc_add {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+
+  .imgClass {
+    display: default;
+    padding: 10px 0px 10px 10px;
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  h4 {
+    position: relative;
+    top: 20px;
+    left: 10px;
+
+  }
+  
+  h5 {
+    position: relative;
+    top: 80px;
+    right: 50px;
+
+  }
+  
+  h6 {
+    position: relative;
+    top: 120px;
+    right: 170px;
+
+  }
+  
+  .desc_add {
+    display: inline-flex;
+  }

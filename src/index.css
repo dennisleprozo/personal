@@ -1,20 +1,36 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+  background-color: transparent;
 }
-/* .navbar-nav {
-  position: fixed;
-} */
+
+
+
+
+
+
+
+
+
+
 .whitefont {
-  color: rgba(174, 191, 211, 0.377);
-  float: center;
+  color: rgba(38, 170, 247, 0.781);
+  padding: 25px 1px 5px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  width: 100%;
 }
+
+
 
 .imgClass {
   padding: 20px;
-  height: 300px;
-  width: 400px;
+  height: 100vh;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   flex-wrap: row nowrap;
@@ -24,29 +40,33 @@ body {
 }
 
 h4 {
-font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
 
 h5 {
+  padding: 0;
+  margin: 0;
+  border: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
 }
 
 h6 {
+  padding: 0;
+  margin: 0;
+  border: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
 }
 
 
-
-
-
-
-
 .backlink {
   position: fixed;
   bottom: 10px;
-  left: 30px;
+  right: 30px;
 }
 
