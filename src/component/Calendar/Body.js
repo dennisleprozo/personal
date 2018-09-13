@@ -19,6 +19,7 @@ export default class Body extends Component {
         this.setState({ events: res.data });
       });
     }
+    
   }
 
   addToList() {
@@ -44,17 +45,20 @@ export default class Body extends Component {
             <li className="ptColor"> Trainer: {timed.pt} </li>
           </ul>
 
+            <h4>
           <button id="btn" onClick={() => this.addToSchedule({ time: timed.time_id })}>
-            ADD SCHEDULE
+            ADD TO SCHEDULE
           </button>
+            </h4>
         </div>
       );
     });
 
     return ( 
       <div className="list">
+      
         {mappedTime}
-        <Link to='/Login'><button>Classes</button></Link>
+
       </div>
     )
   }

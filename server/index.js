@@ -9,6 +9,14 @@ const express = require("express"),
 
 const app = express();
 
+
+
+
+app.use( express.static( `${__dirname}/../build` ) );
+
+
+
+
 let {
   SERVER_PORT,
   SECRET,
@@ -70,7 +78,7 @@ app.get("/api/user-data", (req, res) => {
 //destroys session at restart
 app.get("/logout", (req, res) => {
   req.session.destroy();
-  res.redirect("http://localhost:3000/");
+  res.redirect(process.env.REACT_APP_REDIRECT);
 });
 
 //READ classes from dB
@@ -83,7 +91,7 @@ app.get("/api/schedule", schedule.get);
 
 //UPDATE schedule and add times to table:schedule
 app.put("/api/classes", schedule.update);
-// app.get("/api/classes", schedule.get);
+
 
 //DELETE times from table:schedule
 app.delete("/api/schedule/:id", schedule.delete);

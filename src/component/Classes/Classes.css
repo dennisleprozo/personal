@@ -40,5 +40,5 @@
   }
   
   .desc_add {
-    display: inline-flex;
+    display: flex;
   }

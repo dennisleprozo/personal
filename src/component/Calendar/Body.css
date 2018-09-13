@@ -1,48 +1,9 @@
-.classfontstyle {
-  color: rgba(60, 213, 233, 0.534);
-}
-.whitefont {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-around; */
-  width: 100%;
-}
-.alignclasses {
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    list-style: none;
-}
 #btn {
-    padding: 1px 8px;
-    border: 2px 3px;
-    margin: 2px 1px;
-    font-size: 13px;
+  background: rgb(101, 149, 189);
+  padding: 2px;
+  margin: auto;
 }
 
-
-
-.list {
-    padding: 3px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: left;
+ul {
+  list-style: none;
 }
-.timeColor {
-    margin: 5px;
-    color: rgba(199, 247, 235, 0.87);
-}
-.nameColor {
-    margin: 8px;
-    color: rgba(103, 243, 208, 0.603);
-}
-.descColor{
-    margin: 8px;
-    color: rgba(114, 250, 159, 0.747);
-}
-.ptColor{
-    margin: 8px;
-    color: rgba(83, 245, 50, 0.801)
-}
-

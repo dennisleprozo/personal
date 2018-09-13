@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Navbar from '../Navbar/Navbar';
 import { Link } from "react-router-dom";
+import Navbar from '../Navbar/Navbar';
+import './Schedule.css';
 import Admin from "../../Admin/Admin"
 
 export default class Schedule extends Component {
@@ -39,18 +40,19 @@ export default class Schedule extends Component {
         const mappedSchedule = this.state.schedule.map((scheduled, i) => {
             // console.log(mappedSchedule)
             return (
-                <div key={i} className="whitefont">
+                <div key={i}>
                     <div>
                         <h4>{scheduled.time}: { scheduled.day}</h4>
                         <h4>{scheduled.class_name} </h4>
                         <h4> Description: </h4>
                         <h4>{scheduled.description}</h4>
-                        <h1>
+                        
 
-                        <button id="btn" onClick={() => this.deleteSchedule(scheduled.schedule_id)}> DELETE SCHEDULE
+                        <button id="btn" onClick={() => this.deleteSchedule(scheduled.schedule_id)}> 
+                            DELETE SCHEDULE
                         </button>
                         
-                        </h1>
+                    
                         
                     </div>
                 </div>
@@ -59,12 +61,18 @@ export default class Schedule extends Component {
 
     return (
     <div>
-        <Navbar />
+        <Navbar/>
+
         {mappedSchedule}
-        <Link to='/Login'><button>Back to Classes</button></Link>
-        <br/>
-        <Link to='/Admin'><button>Administrator's Page</button></Link>
         
+        <Link to='/Admin'>
+            <button>
+                <h3>
+                    ADMINISTRATOR'S PAGE
+                </h3>
+            </button>
+        </Link>
+
     </div>
     );
     }

@@ -25,13 +25,18 @@ export default class className extends Component {
     console.log(this.state)
     return (
       <div className="align-text">
+
+
         <h4> Class : {this.props.description} </h4> 
         {/* <input onChange={(e) => this.setState({description: e.target.value}) } type="text"/> */}
 
         <h4> Trainer : {this.props.trainer}</h4> 
+        
         <h4> Edit Trainer Name to: <input onChange={(e) => this.setState({trainer: e.target.value}) } type="text" />
+
         <button onClick={() => this.updateTrainer() }>Change</button>
         </h4>
+
 
       </div>
     )

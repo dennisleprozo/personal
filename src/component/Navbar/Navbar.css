@@ -1,0 +1,10 @@
+.intro {
+    height: 55vh;
+    width: 100%;
+    margin: auto;
+    background: url("https://images.pexels.com/photos/136394/pexels-photo-136394.jpeg?auto=compress&cs=tinysrgb&h=350")
+      no-repeat 100% 100%;
+    background-size: cover;
+    display: table;
+    top: 0;
+}

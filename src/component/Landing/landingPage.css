@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway"); /*  Nav font  */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway"); /*  Header font  */
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 200%;
+  font-weight: 700;
+  color: #2c2c2c;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3 {
+  height: 100%;
+  width: 100%;
+  padding: 1px 0 0 0;
+  color: rgb(0, 0, 0);
+
+}
+
+p {
+  font-family: "Raleway", serif;
+  color: #2c2c2c;
+  font-size: 130%;
+  line-height: 170%;
+  text-align: justify;
+  font-weight: 300;
+}
+element.style {
+  height: fit-content !important;
+}
+img {
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.intro {
+  height: 55vh;
+  width: auto;
+  margin: 0;
+  background: url("https://cdn.pixabay.com/photo/2016/12/23/10/44/road-1927130_960_720.jpg")
+    no-repeat 100% 100%;
+  background-size: cover;
+  display: table;
+  top: 0;
+}
+.intro .inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+}
+.content {
+  max-width: 600px;
+  margin: auto;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 300%;
+  font-weight: 700;
+  color: rgba(242, 247, 253, 0.897);
+  text-align: center;
+  padding: 2%;
+  text-shadow: 0px 0px 100px #000;
+}
+.content p {
+  color: rgb(238, 244, 248);
+}
+.inner {
+  max-width: 600px;
+  margin: auto;
+  font-size: 170%;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+/* nav bar*/
+nav {
+  float: left;
+  padding: 5% 5% 0 0;
+  height: 50px;
+}
+nav ul {
+  list-style: none;
+  float: left;
+}
+nav ul li {
+  font-family: "Raleway", sans-serif;
+  font-size: 120%;
+}
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 900;
+  text-shadow: 10px 10px 10px 20px #000;
+}
+  nav ul li a:hover {
+    color: rgb(245, 82, 82);
+    text-decoration: underline;
+  }
+  nav ul, nav:active ul {
+    display: none;
+    padding: 8px 0;
+    width: 20%;
+    z-index: 1000;
+  }
+  nav li {
+    width: 100%;
+    padding: 1px 0 2px 5px;
+    margin: 0;
+  }
+  nav:hover ul {
+    display: block;
+    position: absolute;
+  }
+  #menu-icon {
+    width: 32px;
+    height: 32px;
+    background: url(
+        https://cdn4.iconfinder.com/data/icons/32x32-free-design-icons/32/Work_area.png
+        ) center;
+    display: inline-block;
+    margin: 30px 0 0px 30px;
+  }
+/* end Navbar */
+
+
+.left-col {
+    width: 60%;
+    float: left;
+    margin: 3% 0 4% 4%;
+}
+.left-col-org {
+    color: #333;
+    width: 77%;
+    float: left;
+    margin: 3% 0 4% 4%;
+}
+
+
+
+.left-col-org h2 a:hover {
+  color: rgb(70, 124, 243)
+}
+
+
+
+
+.sidebar {
+    width: 25%;
+    float: left;
+    margin: 6% 0 0 4%;
+}
+.one-third-class {
+    width: 28%;
+    padding: 3%;
+    float: left;
+}
+.one-third-class img:hover {
+    opacity: 0.9;
+    padding: 1%;
+}
+.contact a {
+    color: #333;
+    text-decoration: none;
+}
+.contact p:hover {
+    color: rgba(39, 100, 230, 0.877);
+}
+
+.contact p {
+    text-align: center;
+    letter-spacing: 5px;
+}
+.break {
+    display: none;
+}
+.clearfix {
+    clear: both;
+    height: 3%;
+}
+.parallax {
+    height: 17vh;
+    background: url("https://cdn.onlyinyourstate.com/wp-content/uploads/2018/01/38382110452_bf1aa08c84_b-700x394.jpg") repeat fixed 100%;
+}
+.parallax-inner {
+    padding-top: 20%;
+}
+
+#my-id {
+    text-indent: 0;
+}
+
+
+
+.social {
+    list-style: none;
+    text-align: center;
+    /* background-color: #2c40f3 */
+}
+.social li {
+    display: inline;
+    margin: 1% 4% 0% 0%;
+}
+.social i {
+    font-size: 100%;
+    margin: 1% 5% 20% 0%;
+}
+.social i:hover{
+    color: #333;
+}
+
+footer.second p{
+    width: 100%;
+    background-color: #2c2c2c;
+    color: rgb(236, 219, 219);
+    text-align: center;
+}
+
+
+
+
+
+/* Media Queries */
+/* Media Responsiveness for Mobile Version */
+@media (max-width: 768px) {
+    #menu-icon {
+        margin: 30px 0 0 30px;
+    }
+    nav ul, nav:active ul {
+        padding: 8px 0;
+        left: 23px;
+        top: 34px;
+        width: 50%;
+    }
+    .inner {
+        font-size: 120%;
+    }
+    .content h1 {
+        font-size: 180%;         
+    }
+    p {
+        font-size: 120%;
+    }
+    h2 {
+        font-size: 160%;
+    }
+    .left-col {
+        width: 96%;
+        margin: 0 0 3% 0;
+        padding: 0 2%;
+    }
+    .sidebar{
+        width: 96%;
+        margin: 0 auto;
+    }
+    img {
+        padding: 2%;
+    }
+    .one-third-class {
+        width: 96%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .break {
+        display: block;
+    }
+    .parallax {
+        display: none;
+    }
+    .social i {
+        font-size: 170%;
+    }
+}
+
+@media (max-width: 576px) {
+}

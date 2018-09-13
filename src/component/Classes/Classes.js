@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Dashboard from "../Dashboard/Dashboard";
 import axios from "axios";
 import "./Classes.css";
-import Navbar from "../Navbar/Navbar";
-import PersonalTrainer from '../PersonalTrainer/PersonalTrainer'
+import PersonalTrainer from '../PersonalTrainer/PersonalTrainer';
+import Navbar from '../Navbar/Navbar'
 
 export default class Classes extends Component {
   constructor() {
@@ -37,9 +36,16 @@ export default class Classes extends Component {
     // scrolling alert
     return (
       <div>
-        <h3 className="mapped">{mappedClasses}</h3>
-        <Link to="/PersonalTrainer" className="backlink">
-            Next >>>
+
+        <Navbar/>
+
+        {mappedClasses}
+          <Link to="/PersonalTrainer" className="backlink">
+            <button>
+                <h3>
+                  Add favorite class to schedule.
+                </h3>
+            </button>
         </Link>
       </div>
     );

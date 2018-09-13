@@ -11,19 +11,25 @@ export default class Calendar extends Component {
         week: ''
     }
     this.handleClick=this.handleClick.bind(this)
-}
+  }
+
+
+
   handleClick(day) {
-  this.setState({week: day})    
+      this.setState({week: day})    
   }
 
   render() {
   console.log(this.state.week)
 
-    return (
+    return(
       <div>
+
         <Header handleClick={this.handleClick} />
         
         <Body week={this.state.week} />
+
+        
       </div>
     )
   }

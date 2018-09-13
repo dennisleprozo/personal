@@ -36,12 +36,19 @@ export default class Admin extends Component {
 //button onclick renders list of schedule with EDIT button
     return (
       <div>
-        <Navbar />
-        <button onClick={() => this.handleClick()}>UPDATE TRAINER</button>
-        {mappedClassList}
-            
-        <Link  to='/' className="link_img">
-        <img src="https://cnet1.cbsistatic.com/img/hHQ5zbteVrxFiOM6MLiCr-gP3c8=/270x0/2012/02/08/48603fec-fdc2-11e2-8c7c-d4ae52e62bcc/iphone-home-button.png" alt=""/></Link>
+
+        <Navbar/>
+
+          <button onClick={() => this.handleClick()}>
+            <h3>UPDATE TRAINER</h3>
+          </button>
+          
+            {mappedClassList}
+
+          <button onClick={() => this.handleClick()}>
+            <h3>Check Updated Trainer</h3>
+          </button>
+        
       </div>
     );
   }
