@@ -25,7 +25,7 @@ export default class Classes extends Component {
     const mappedClasses = this.state.classes.map((classed, i) => {
       return (
         <div key={i} id="desc_add">
-            <img className="imgClass " src={classed.class_img}alt="image" width="300px" />
+            <img className="imgClass" src={classed.class_img}alt="" width="300px" />
             <h4>Class: {classed.class_name} </h4>
             <h5>Description: {classed.description}</h5>
             {/*<h6>Trainer: {classed.pt}</h6> */}

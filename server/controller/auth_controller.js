@@ -27,7 +27,7 @@ module.exports = {
 
 
 
-
+//Checkout request test
     checkout: (req, res) => {
       const {
         amount,
@@ -52,12 +52,3 @@ module.exports = {
       );
     },
   }
-
-
-
-
-
-
-
-
-  

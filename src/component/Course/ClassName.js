@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './ClassName.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default class className extends Component {
   constructor() {

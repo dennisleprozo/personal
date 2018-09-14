@@ -45,16 +45,22 @@ app.get("/auth/callback", async (req, res) => {
     redirect_uri: process.env.AUTH0
   };
 
+
+
   let resWithToken = await axios.post(
     `https://${REACT_APP_DOMAIN}/oauth/token`,
     payload
   );
+
+
 
   let resWithUserData = await axios.get(
     `https://${REACT_APP_DOMAIN}/userinfo?access_token=${
       resWithToken.data.access_token
     }`
   );
+
+  
 
   req.session.user = resWithUserData.data;
   res.redirect("/#/Login");
@@ -72,7 +78,6 @@ app.get("/api/user-data", (req, res) => {
 
 //stripe
 app.post("/api/payment", ctrlr.checkout)
-
 
 
 //destroys session at restart
