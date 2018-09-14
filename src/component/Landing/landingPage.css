@@ -27,12 +27,18 @@ h3 {
 }
 
 p {
+  text-indent: 5%;
   font-family: "Raleway", serif;
   color: #2c2c2c;
   font-size: 130%;
   line-height: 170%;
   text-align: justify;
   font-weight: 300;
+}
+
+#no-indent {
+  font-family: "Raleway", serif;
+  text-indent: 0%;
 }
 element.style {
   height: fit-content !important;
@@ -48,7 +54,7 @@ img {
   height: 55vh;
   width: auto;
   margin: 0;
-  background: url("https://cdn.pixabay.com/photo/2016/12/23/10/44/road-1927130_960_720.jpg")
+  background: url("https://images.pexels.com/photos/416676/pexels-photo-416676.jpeg?auto=compress&cs=tinysrgb&h=350")
     no-repeat 100% 100%;
   background-size: cover;
   display: table;
@@ -105,7 +111,7 @@ nav ul li a {
   text-shadow: 10px 10px 10px 20px #000;
 }
   nav ul li a:hover {
-    color: rgb(245, 82, 82);
+    color: rgb(15, 88, 223);
     text-decoration: underline;
   }
   nav ul, nav:active ul {
@@ -147,23 +153,18 @@ nav ul li a {
     margin: 3% 0 4% 4%;
 }
 
-
-
 .left-col-org h2 a:hover {
   color: rgb(70, 124, 243)
 }
 
-
-
-
 .sidebar {
-    width: 25%;
+    width: 23%;
     float: left;
-    margin: 6% 0 0 4%;
+    margin: 4% 0 0 4%;
 }
 .one-third-class {
     width: 28%;
-    padding: 3%;
+    padding: 1%;
     float: left;
 }
 .one-third-class img:hover {
@@ -198,7 +199,7 @@ nav ul li a {
 }
 
 #my-id {
-    text-indent: 0;
+    text-align: center;
 }
 
 
@@ -240,7 +241,7 @@ footer.second p{
     nav ul, nav:active ul {
         padding: 8px 0;
         left: 23px;
-        top: 34px;
+        top: 23px;
         width: 50%;
     }
     .inner {

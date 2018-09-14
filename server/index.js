@@ -9,13 +9,7 @@ const express = require("express"),
 
 const app = express();
 
-
-
-
 app.use( express.static( `${__dirname}/../build` ) );
-
-
-
 
 let {
   SERVER_PORT,
@@ -74,6 +68,12 @@ app.get("/api/user-data", (req, res) => {
     res.status(401).send("nice try brotha!");
   }
 });
+
+
+//stripe
+app.post("/api/payment", ctrlr.checkout)
+
+
 
 //destroys session at restart
 app.get("/logout", (req, res) => {

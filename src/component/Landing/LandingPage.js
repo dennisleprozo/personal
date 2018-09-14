@@ -8,11 +8,28 @@ import li from '../../images/li.png';
 import yt from '../../images/yt.png';
 import tw from '../../images/tw.png';
 import gh from '../../images/gh.png';
+import axios from 'axios';
+import StripeCheckout from 'react-stripe-checkout'
 
 // import g from '../../images/g.png';
 // import { Link, Router } from 'react-router-dom';
 
 export default class LandingPage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            amount: 100
+         }
+    }
+
+    onToken = (token) => {
+        token.card = void 0
+            axios.post('/api/payment', {token, amount: this.state.amount})
+                .then(res => {
+                    console.log(res)
+        })
+    }
+
   render() {
     return (
     <div>
@@ -30,7 +47,7 @@ export default class LandingPage extends Component {
             <div className="inner">
                 <div className="content">
                     <h1>My Project</h1>
-                    <p>my blog.</p>
+                        <p>my blog.</p>
                 </div>
             </div>
         </section>
@@ -40,8 +57,10 @@ export default class LandingPage extends Component {
     <a name="about"></a>
         <section className="left-col">
             <h2>About</h2>
-            <p>This section is all about walkthrough sitemap of the front-end application. </p>
+            <p>Blogging is now a well-established media for consumers who turn to their favourite
+writers for news, advice, inspiration or information on a particular topic or theme. </p>
             <p>Let's put a new paragraph to test the responsiveness of this section from mobile to full screen display.</p>
+            <p>Bloggers are predominantly female and blog for personal reasons</p>
         </section>
 
         <section className="sidebar">
@@ -51,20 +70,14 @@ export default class LandingPage extends Component {
 
 
 
-
-
-
-
 {/* Links to the Gym App */}
 <div className="clearfix"></div>
         <a name="org"></a>
         <section className="left-col-org">
-        <Link to='/Dashboard'><h2>My Gym Organizer</h2></Link>
-            <p>This section takes you to my Gym App.  The Gym app allows you to add classes in your schedule.  You can also edit your existing schedule by deleting and adding a new class.</p>
+        <Link to='/Dashboard'><h2>Gym Class Organizer</h2></Link>
+            <p>Going to the gym can be as natural to some as showering or eating. But for most of us, it’s something we try to unearth the energy to do at least once a week, and if we make it happen one Monday for 45 minutes, we’re supremely proud of ourselves.</p>
+            <p>That's why i created an app to schedule my daily activities.</p>
         </section>
-
-
-
 
 
 
@@ -93,8 +106,8 @@ export default class LandingPage extends Component {
 <div className="clearfix"></div>
         <a name="port"></a>
         <section className="left-col">
-            <h2>My Hobbies</h2>
-                <p>This section consists of the Author's collection of artworks.  This includes some sports fan pictures, nature loving views and some photos</p>
+            <h2>Hobbies</h2>
+                <p>This section consists of the Author's regular collection of artworks.  This includes some activities, interest, amusement and enthusiasm for sports and nature.</p>
         </section>
         <section className="sidebar">
             <section className="contact">
@@ -117,11 +130,36 @@ export default class LandingPage extends Component {
         </section>
 
 <div className="clearfix"></div>
+<br/>
+<br/>
+
+    <h2>Peer-to-Peer Fundraising</h2>
+    <section>
+        <br/>
+        <p id="my-id">
+            <a>Donate a $1 thru online fundraising</a>
+            <br/>
+            <a>
+                <br/>
+                <StripeCheckout
+                    name="Peer-to-Peer Financing"
+                    description="Thank you!"
+                    image="https://cdn1.iconfinder.com/data/icons/line-basic-icon-set/128/support-128.png"
+                    token= {this.onToken}
+                    stripeKey="pk_test_42FUf3LLmwf5CTNDTBAgypwe"
+                    amount={this.state.amount}
+                />
+            </a> 
+        </p>
+    </section>
+
+
+<div className="clearfix"></div><br/>
     <h2>Contact Me</h2>
     <section className="contact">
     <br/>
-        <p id="my-id">DENNIS<br/>
-            <a href="mailto:dennisvleprozo@gmail.com">me@dmenace.com</a> <br/>
+        <p id="no-indent">D E N N I S<br/>
+            <a href="mailto:dennisvleprozo@gmail.com">me@dennisleprozo.com</a> <br/>
                 1-702-424-4242 
         </p>
         <p>
@@ -140,8 +178,8 @@ export default class LandingPage extends Component {
             <li><a href="https://www.instagram.com/dennisleprozo/"><img src={ig}/></a></li>
             <li><a href="https://github.com/dennisleprozo"><img src={gh}/></a></li>
             <li><a href="https://www.youtube.com/user/dennisleprozo"><img src={yt}/></a></li>
-            {/* <li><a href="https://twitter.com/dennis_leprozo"><img src={tw}/></a></li> */}
             <li><a href="https://www.linkedin.com/in/dennisleprozo/"><img src={li}/></a></li>
+            {/* <li><a href=""><img src={}/></a></li> */}
         </ul>
     </footer>
     <footer className="second">
