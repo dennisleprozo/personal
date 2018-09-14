@@ -29,7 +29,7 @@
     "/api": {
       "target": "http://localhost:3005"
     },
-    "/auth/callback": {
+    "/auth": {
       "target": "http://localhost:3005"
     }
   }
