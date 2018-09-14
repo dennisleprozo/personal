@@ -9,7 +9,7 @@ const express = require("express"),
 
 const app = express();
 
-app.use( express.static( `${__dirname}/../build` ) );
+app.use(express.static(`${__dirname}/../build`));
 
 let {
   SERVER_PORT,
@@ -44,24 +44,18 @@ app.get("/auth/callback", async (req, res) => {
     grant_type: "authorization_code",
     redirect_uri: process.env.AUTH0
   };
-
-
-
+  console.log("payload", payload);
   let resWithToken = await axios.post(
     `https://${REACT_APP_DOMAIN}/oauth/token`,
     payload
   );
-
-
-
+  console.log("resWithToken", resWithToken);
   let resWithUserData = await axios.get(
     `https://${REACT_APP_DOMAIN}/userinfo?access_token=${
       resWithToken.data.access_token
     }`
   );
-
-  
-
+  console.log("resWithUserData", resWithUserData);
   req.session.user = resWithUserData.data;
   res.redirect("/#/Login");
 });
@@ -75,10 +69,8 @@ app.get("/api/user-data", (req, res) => {
   }
 });
 
-
 //stripe
-app.post("/api/payment", ctrlr.checkout)
-
+app.post("/api/payment", ctrlr.checkout);
 
 //destroys session at restart
 app.get("/logout", (req, res) => {
@@ -96,7 +88,6 @@ app.get("/api/schedule", schedule.get);
 
 //UPDATE schedule and add times to table:schedule
 app.put("/api/classes", schedule.update);
-
 
 //DELETE times from table:schedule
 app.delete("/api/schedule/:id", schedule.delete);
